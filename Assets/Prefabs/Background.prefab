@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalSpeed: 2
-  horizontalBoundary: 17.5
+  horizontalBoundary: 17
 --- !u!1 &349691160678741020
 GameObject:
   m_ObjectHideFlags: 0
