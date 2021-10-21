@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+BulletFactory.cs
+Author: Mehrara Sarabi 
+Student ID: 101247463
+Last modified: 2021-10-21
+Description: This code instantiates a random bullet out of the three bullet types.
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +17,7 @@ public class BulletFactory : MonoBehaviour
     public GameObject fatBullet;
     public GameObject pulsingBullet;
 
+    // Create a random bullet of any type
     public GameObject createBullet(BulletType type = BulletType.RANDOM)
     {
         if (type == BulletType.RANDOM)
@@ -17,7 +25,7 @@ public class BulletFactory : MonoBehaviour
             var randomBullet = Random.Range(0, 3);
             type = (BulletType) randomBullet;
         }
-
+        // Instantiate bullet and assign damage value
         GameObject tempBullet = null;
         switch (type)
         {

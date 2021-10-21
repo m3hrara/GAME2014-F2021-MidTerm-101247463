@@ -1,4 +1,14 @@
-﻿using System.Collections;
+﻿/*
+PlayerController.cs
+Author: Mehrara Sarabi 
+Student ID: 101247463
+Last modified: 2021-10-21
+Description: This code enables the player to move its ship up and down using touch input. It enables bullet firing with a delay.
+It also checks the boundaries of the game to make sure player stays in it.
+ */
+
+
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEditor;
@@ -58,13 +68,13 @@ public class PlayerController : MonoBehaviour
 
             if (worldTouch.y > transform.position.y)
             {
-                // direction is positive
+                // direction is positive, move up
                 direction = 1.0f;
             }
 
             if (worldTouch.y < transform.position.y)
             {
-                // direction is negative
+                // direction is negative, move down
                 direction = -1.0f;
             }
 
@@ -75,13 +85,13 @@ public class PlayerController : MonoBehaviour
         // keyboard support
         if (Input.GetAxis("Vertical") >= 0.1f) 
         {
-            // direction is positive
+            // direction is positive, move up
             direction = 1.0f;
         }
 
         if (Input.GetAxis("Vertical") <= -0.1f)
         {
-            // direction is negative
+            // direction is negative, move down
             direction = -1.0f;
         }
 
