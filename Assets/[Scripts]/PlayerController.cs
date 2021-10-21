@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
             direction = -1.0f;
         }
 
-        if (m_touchesEnded.x != 0.0f)
+        if (m_touchesEnded.y != 0.0f)
         {
            transform.position = new Vector2(transform.position.x, Mathf.Lerp(transform.position.y, m_touchesEnded.y, verticalValue));
         }
